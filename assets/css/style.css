@@ -1089,3 +1089,48 @@ footer {
 		text-align: center;
 	}
 }
+
+/* 404 page */
+.not-found-page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 24px;
+}
+
+.not-found-page img.logo {
+	width: 180px;
+	margin-bottom: 40px;
+}
+
+.not-found-page h1 {
+	font-weight: 700;
+	font-size: 28px;
+	color: var(--blue);
+	margin-bottom: 12px;
+}
+
+.not-found-page p {
+	font-size: 16px;
+	color: var(--charcoal-willow);
+	margin-bottom: 32px;
+	max-width: 420px;
+}
+
+.not-found-page a.home-link {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 15px;
+	color: var(--zinc-white);
+	background: var(--blue);
+	padding: 12px 28px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+.not-found-page a.home-link:hover {
+	background: var(--pink);
+}

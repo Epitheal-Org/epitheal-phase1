@@ -105,6 +105,7 @@
 			>
 		</nav>
 
+		<main>
 		<!-- HERO -->
 		<section class="hero" id="hero">
 			<div class="hero-bg-circle"></div>
@@ -448,6 +449,7 @@
 				info@epitheal.com
 			</button>
 		</section>
+		</main>
 
 		<!-- FOOTER -->
 		<footer>
@@ -503,7 +505,7 @@
 		</footer>
 
 		<!-- EMAIL MODAL -->
-		<div id="email-modal" class="email-modal" aria-hidden="true">
+		<div id="email-modal" class="email-modal" aria-hidden="true" inert>
 			<div class="email-modal-backdrop"></div>
 			<div class="email-modal-panel">
 				<p class="email-modal-label">Open with</p>
@@ -615,11 +617,13 @@
 				emailTrigger.addEventListener("click", function () {
 					emailModal.classList.add("open");
 					emailModal.setAttribute("aria-hidden", "false");
+					emailModal.removeAttribute("inert");
 				});
 
 				function closeEmailModal() {
 					emailModal.classList.remove("open");
 					emailModal.setAttribute("aria-hidden", "true");
+					emailModal.setAttribute("inert", "");
 					setTimeout(function () {
 						copyLabel.textContent = "Copy address";
 					}, 400);
