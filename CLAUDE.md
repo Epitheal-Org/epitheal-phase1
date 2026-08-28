@@ -60,3 +60,9 @@ existing CSS in this repo, ask rather than guess.
 - Report back plainly: what changed, what's still open, what needs a
   human decision rather than a code fix. Match this to how findings get
   handed back to the Claude.ai session working alongside this repo.
+- Do not use headless Chrome screenshots to verify visual/layout
+  changes. Jim verifies visually himself via a local live server. For
+  content/copy changes, verify via markup/structure checks only
+  (element presence, count, correct class usage, HTML validation).
+  Only escalate to visual/screenshot verification if Jim explicitly
+  asks for it.
