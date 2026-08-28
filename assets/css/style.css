@@ -122,7 +122,7 @@ nav ul a:hover {
 	align-items: center;
 	position: relative;
 	overflow: hidden;
-	padding: 5rem 3rem 6rem 10vw; /* top clearance for the fixed nav now comes from the AI-governance banner's margin-top, which sits between nav and Hero */
+	padding: calc(80px + 5rem) 3rem 6rem 10vw;
 }
 
 .hero-bg-circle {
@@ -1074,7 +1074,7 @@ footer {
 	}
 
 	.hero {
-		padding: 3rem 1.5rem 4rem; /* top clearance for the fixed nav now comes from the banner's margin-top */
+		padding: 7rem 1.5rem 4rem;
 		min-height: auto;
 	}
 
