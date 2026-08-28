@@ -105,11 +105,40 @@
 			<div class="hero-bg-circle-2"></div>
 
 			<div class="hero-visual" aria-hidden="true">
-				<img
-					src="https://res.cloudinary.com/dyvjd9yxg/image/upload/q_auto/f_auto/v1780923298/Mixing_cream_with_mortar_and_pestle_xd08l9.png"
-					alt=""
+				<video
+					id="hero-video"
 					class="hero-image"
-				/>
+					src="assets/video/hero-mixing.mp4"
+					poster="https://res.cloudinary.com/dyvjd9yxg/image/upload/q_auto/f_auto/v1780923298/Mixing_cream_with_mortar_and_pestle_xd08l9.png"
+					muted
+					autoplay
+					loop
+					playsinline
+				></video>
+				<script>
+					(function () {
+						var video = document.getElementById("hero-video");
+						if (!video) return;
+
+						// Slowed 10% for a calmer feel. playbackRate isn't reset by
+						// the loop restart (looping just seeks back to 0 and keeps
+						// playing at the current rate), so setting it once is
+						// enough -- set immediately, and again on loadedmetadata as
+						// a safety net for engines that ignore it before metadata
+						// is ready.
+						video.playbackRate = 0.9;
+						video.addEventListener("loadedmetadata", function () {
+							video.playbackRate = 0.9;
+						});
+
+						// prefers-reduced-motion: cancel autoplay immediately so only
+						// the poster frame shows, no playback at all.
+						if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+							video.removeAttribute("autoplay");
+							video.pause();
+						}
+					})();
+				</script>
 			</div>
 
 			<div class="hero-content">
