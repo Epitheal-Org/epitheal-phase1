@@ -276,6 +276,17 @@ nav ul a:hover {
 	transform: translateY(-1px);
 }
 
+/* Dimmed, non-interactive state for a CTA with no destination yet
+   (e.g. blocked on a pending platform/content decision). Pair with
+   the `disabled` attribute, not an href="#" link. */
+.btn-pending,
+.btn-pending:hover {
+	opacity: 0.5;
+	cursor: not-allowed;
+	transform: none;
+	pointer-events: none;
+}
+
 .btn-secondary {
 	background: transparent;
 	color: var(--zinc-white);
@@ -466,6 +477,13 @@ section {
 
 .products-header {
 	margin-bottom: 3rem;
+}
+
+
+/* ─── FUTURE DEVELOPMENT ──────────────────────────────── */
+
+.future-development {
+	background: var(--zinc-white);
 }
 
 .products-grid {
