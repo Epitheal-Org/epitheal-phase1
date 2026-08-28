@@ -561,7 +561,7 @@ section {
 /* ─── TEAM ────────────────────────────────────────────── */
 
 .team {
-	background: var(--zinc-white);
+	background: var(--light-bg);
 }
 
 .team-grid {
