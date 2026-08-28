@@ -525,9 +525,6 @@ section {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1.5rem;
-	align-items: start; /* cards were stretching to match the tallest card's height, which the removed
-	                        product-badge element used to fill via margin-top: auto -- without it, a
-	                        stretched card would leave blank space below its paragraph */
 }
 
 .product-card {
