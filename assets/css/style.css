@@ -637,6 +637,12 @@ section {
 	margin-top: 1rem;
 }
 
+/* ─── TESTIMONIAL INTRO ───────────────────────────────── */
+
+.testimonial-intro {
+	background: var(--zinc-white);
+}
+
 /* ─── TESTIMONIAL ─────────────────────────────────────── */
 
 .testimonial {
