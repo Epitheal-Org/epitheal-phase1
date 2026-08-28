@@ -1,4 +1,4 @@
-# epitheal-phase1-rewrite
+# epitheal-phase1
 
 ## What this repo is
 
