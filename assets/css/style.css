@@ -808,6 +808,12 @@ section {
 	color: var(--zinc-white);
 }
 
+.contact .section-lead {
+	color: rgba(255, 255, 255, 0.75); /* matches .hero-lead's treatment on the same --blue background */
+	margin-left: auto;
+	margin-right: auto;
+}
+
 
 .contact .section-tag {
 	color: var(--pink);
