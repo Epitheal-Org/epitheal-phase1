@@ -8,7 +8,9 @@
 
 :root {
 	--blue: #0733c1;
-	--pink: #ff3ea7;
+	--pink: #ff3ea7; /* Care Point Pink, canonical -- unchanged */
+	--pink-text-aa: #e0008e; /* AA variant: small text on Zinc White backgrounds only */
+	--pink-cta-fill-aa: #e0008e; /* AA variant: Zinc White label on pink button fill only */
 	--charcoal-willow: #334155;
 	--zinc-white: #ffffff;
 	--intelligence-green: #09d1cf;
