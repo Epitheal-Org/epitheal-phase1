@@ -595,6 +595,97 @@ section {
 	font-style: italic;
 }
 
+/* ─── APPLICATIONS ────────────────────────────────────── */
+
+.applications {
+	background: var(--zinc-white);
+}
+
+.applications-header {
+	margin-bottom: 3rem;
+}
+
+.applications-list {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.application-block {
+	display: grid;
+	grid-template-columns: 280px 1fr;
+	gap: 2.5rem;
+	align-items: center;
+	background: var(--light-bg);
+	border-radius: 12px;
+	padding: 2rem 1.75rem;
+	border: 1px solid rgba(7, 51, 193, 0.08); /* --blue at 0.08 opacity, matches .product-card border */
+}
+
+.application-block-reverse {
+	grid-template-columns: 1fr 280px;
+}
+
+.application-block-reverse .application-media {
+	order: 2;
+}
+
+.application-media-placeholder {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--connemara-mist), var(--blush-pink));
+}
+
+.application-num {
+	font-size: 0.7rem;
+	font-weight: 700;
+	color: var(--pink);
+	letter-spacing: 0.1em;
+	margin-bottom: 0.75rem;
+}
+
+.application-copy h3 {
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: var(--blue);
+	margin-bottom: 0.75rem;
+}
+
+.application-copy p {
+	font-size: 0.9rem;
+	color: var(--charcoal-willow);
+	opacity: 0.8;
+	line-height: 1.7;
+	margin-bottom: 1rem;
+}
+
+.application-examples {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.application-examples li {
+	font-size: 0.82rem;
+	color: var(--charcoal-willow);
+	opacity: 0.7;
+	padding-left: 1.1rem;
+	position: relative;
+	margin-bottom: 0.4rem;
+}
+
+.application-examples li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.55em;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: var(--pink);
+}
+
 /* ─── TEAM ────────────────────────────────────────────── */
 
 .team {
@@ -1118,6 +1209,18 @@ footer {
 
 	.products-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.application-block,
+	.application-block-reverse {
+		grid-template-columns: 1fr;
+	}
+	.application-block-reverse .application-media {
+		order: 0;
+	}
+	.application-media-placeholder {
+		max-width: 200px;
+		margin: 0 auto;
 	}
 
 	.team-grid {
