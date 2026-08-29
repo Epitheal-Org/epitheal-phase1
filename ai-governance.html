@@ -156,5 +156,23 @@
 			</div>
 			<p class="footer-copyright">© 2026 Epitheal Limited &middot; CRO 612186. All rights reserved.</p>
 		</footer>
+
+		<!-- SCRIPTS -->
+		<script>
+			// Scroll reveal
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("visible");
+						}
+					});
+				},
+				{ threshold: 0.12 },
+			);
+			document
+				.querySelectorAll(".fade-up")
+				.forEach((el) => observer.observe(el));
+		</script>
 	</body>
 </html>
