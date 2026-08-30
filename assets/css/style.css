@@ -529,18 +529,83 @@ section {
 	gap: 1.5rem;
 }
 
+/* Products card redesign — Recovery Strip / Care Point motif, replaces gradient circle */
 .product-card {
-	background: var(--zinc-white);
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
 	border-radius: 12px;
-	padding: 2rem 1.75rem;
-	border: 1px solid rgba(7, 51, 193, 0.08); /* --blue at 0.08 opacity */
-	transition: border-color 0.2s;
+	padding: 24px 24px 24px 32px;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 }
 
-.product-card:hover {
-	border-color: rgba(7, 51, 193, 0.2); /* --blue at 0.2 opacity */
+.product-card__strip {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 6px;
+	background: #0733c1; /* Recovery Blue */
+	transition: width 0.2s ease;
+}
+
+.product-card__dot {
+	position: absolute;
+	left: -3px;
+	top: 24px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #ff3ea7; /* Care Point Pink */
+	transition: transform 0.2s ease;
+}
+
+.product-card:hover .product-card__strip {
+	width: 10px;
+}
+.product-card:hover .product-card__dot {
+	transform: translateY(4px) scale(1.15);
+}
+
+.product-card__icon {
+	width: 24px;
+	height: 24px;
+	color: #ff3ea7; /* Care Point Pink */
+}
+
+.product-card__eyebrow {
+	font-family: Montserrat, sans-serif;
+	font-weight: 600;
+	font-size: 11px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #94a3b8;
+	margin-top: 10px;
+}
+
+.product-card__heading {
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	color: #0733c1; /* Recovery Blue */
+	margin: 6px 0 8px;
+}
+
+.product-card__body {
+	font-family: Montserrat, sans-serif;
+	font-size: 14px;
+	color: #334155; /* Charcoal Willow */
+	line-height: 1.6;
+	margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.product-card__strip,
+	.product-card__dot {
+		transition: none;
+	}
 }
 
 .product-card-num {
