@@ -719,6 +719,34 @@ section {
 	box-shadow: 0 2px 12px rgba(7, 51, 193, 0.07); /* --blue at 0.07 opacity */
 }
 
+.applications-intro-logo {
+	grid-row: 2;
+	align-self: center;
+	justify-self: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.applications-intro-logo img {
+	max-width: 300px;
+	width: 100%;
+	height: auto;
+}
+
+.applications-intro-logo--left {
+	grid-column: 1;
+	justify-self: start;
+	justify-content: flex-start;
+	opacity: 0.7;
+}
+
+.applications-intro-logo--right {
+	grid-column: 3;
+	justify-self: end;
+	justify-content: flex-end;
+}
+
 .applications-list {
 	display: flex;
 	flex-direction: column;
