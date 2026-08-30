@@ -21,6 +21,7 @@
 	--light-bg: #f4f6ff;
 	--footer-bg: #021a7a;
 	--mineral-mist: #C7F0EA;
+	--ink-void: #05060a; /* dark orb-casing backdrop, distinct from --charcoal-willow (text/UI) */
 	--font: "Montserrat", sans-serif;
 }
 
@@ -664,10 +665,58 @@ section {
 
 .applications {
 	background: var(--zinc-white);
+	padding-top: 6rem;
+	padding-bottom: 3.5rem;
 }
 
 .applications-header {
 	margin-bottom: 3rem;
+}
+
+.applications-intro-grid {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 312px 1fr;
+	grid-template-rows: auto 312px auto;
+	row-gap: 1.5rem;
+	column-gap: 2rem;
+	margin-top: 1.5rem;
+}
+
+.applications-intro-grid .application-copy:nth-child(1) {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.applications-intro-grid .application-copy:nth-child(2) {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+.applications-intro-grid .application-copy:nth-child(3) {
+	grid-column: 1;
+	grid-row: 3;
+}
+
+.applications-intro-grid .application-copy:nth-child(4) {
+	grid-column: 3;
+	grid-row: 3;
+}
+
+.applications-intro-orb {
+	grid-column: 2;
+	grid-row: 2;
+	align-self: center;
+	justify-self: center;
+	width: 272px;
+	aspect-ratio: 1 / 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem;
+	background: radial-gradient(circle at 50% 45%, #14101f 0%, var(--ink-void) 70%);
+	border-radius: 50%;
+	box-shadow: 0 2px 12px rgba(7, 51, 193, 0.07); /* --blue at 0.07 opacity */
 }
 
 .applications-list {
@@ -700,6 +749,21 @@ section {
 	aspect-ratio: 1 / 1;
 	border-radius: 50%;
 	background: linear-gradient(135deg, var(--connemara-mist), var(--blush-pink));
+}
+
+.application-orb {
+	display: none;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+}
+
+.application-orb.is-active {
+	display: block;
+}
+
+.application-media-placeholder.is-hidden {
+	display: none;
 }
 
 .application-num {
@@ -1286,6 +1350,19 @@ footer {
 	.application-media-placeholder {
 		max-width: 200px;
 		margin: 0 auto;
+	}
+
+	.applications-intro-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.applications-intro-orb {
+		order: -1;
+		width: 100%;
+		max-width: 200px;
+		margin: 0 auto 1rem;
 	}
 
 	.team-grid {
