@@ -561,6 +561,28 @@ section {
 	filter: sepia(0.4) contrast(1.05) brightness(0.95);
 }
 
+@media (min-width: 769px) {
+	.story-grid {
+		display: flow-root;
+	}
+
+	.story-text {
+		max-width: none;
+	}
+
+	.story-carousel {
+		float: right;
+		margin-left: 3rem;
+		margin-bottom: 1.5rem;
+		width: 45%;
+		max-width: 45%;
+	}
+
+	.story-text .btn-primary {
+		clear: both;
+	}
+}
+
 .photo-slot-placeholder {
 	display: flex;
 	align-items: center;
