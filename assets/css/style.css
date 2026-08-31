@@ -50,7 +50,7 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem 3rem;
-	background: rgba(7, 51, 193, 0.97); /* --blue at 0.97 opacity */
+	background: rgba(255, 255, 255, 0.97);
 	backdrop-filter: blur(8px);
 }
 
@@ -73,7 +73,7 @@ nav ul {
 }
 
 nav ul a {
-	color: rgba(255, 255, 255, 0.75);
+	color: var(--charcoal-willow);
 	text-decoration: none;
 	font-size: 0.8rem;
 	font-weight: 500;
@@ -83,7 +83,7 @@ nav ul a {
 }
 
 nav ul a:hover {
-	color: var(--zinc-white);
+	color: var(--blue);
 }
 
 .nav-contact {
