@@ -430,16 +430,22 @@ section {
 	background: var(--light-bg);
 }
 
+@media (min-width: 769px) {
+	.credibility-strip {
+		padding: 3rem 3rem;
+	}
+}
+
 .credibility-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	gap: 1.5rem;
+	gap: 1.25rem;
 }
 
 .credibility-card {
 	background: var(--zinc-white);
 	border-radius: 12px;
-	padding: 2rem 1.75rem;
+	padding: 1.5rem 1.25rem;
 	border: 1px solid rgba(7, 51, 193, 0.08); /* --blue at 0.08 opacity */
 	display: flex;
 	flex-direction: column;
@@ -449,8 +455,8 @@ section {
 }
 
 .credibility-icon {
-	width: 64px;
-	height: 64px;
+	width: 48px;
+	height: 48px;
 }
 
 .credibility-label {
