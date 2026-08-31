@@ -186,7 +186,7 @@ nav ul a:hover {
 
 .hero {
 	min-height: 80vh;
-	background: var(--blue);
+	background: var(--zinc-white);
 	display: flex;
 	align-items: center;
 	position: relative;
