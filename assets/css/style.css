@@ -1412,16 +1412,16 @@ footer {
 	}
 
 	.applications-intro-grid {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
 	}
 
-	.applications-intro-orb {
-		order: -1;
-		width: 100%;
-		max-width: 200px;
-		margin: 0 auto 1rem;
+	.applications-intro-grid .application-copy:nth-child(1),
+	.applications-intro-grid .application-copy:nth-child(2),
+	.applications-intro-grid .application-copy:nth-child(3),
+	.applications-intro-grid .application-copy:nth-child(4) {
+		grid-column: 1;
+		grid-row: auto;
 	}
 
 	.team-grid {
