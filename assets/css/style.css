@@ -1466,7 +1466,21 @@ footer {
 	}
 
 	.credibility-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.75rem;
+	}
+
+	.credibility-card {
+		padding: 1rem 0.75rem;
+	}
+
+	.credibility-icon {
+		width: 36px;
+		height: 36px;
+	}
+
+	.credibility-label {
+		font-size: 0.8rem;
 	}
 
 	.story-grid {
