@@ -358,13 +358,13 @@ nav ul a:hover {
 
 .btn-secondary {
 	background: transparent;
-	color: var(--zinc-white);
+	color: var(--blue);
 	padding: 14px 28px;
 	border-radius: 8px;
 	font-family: var(--font);
 	font-size: 0.88rem;
 	font-weight: 500;
-	border: 1.5px solid var(--zinc-white);
+	border: 1.5px solid var(--blue);
 	cursor: pointer;
 	text-decoration: none;
 	transition:
@@ -374,9 +374,9 @@ nav ul a:hover {
 }
 
 .btn-secondary:hover {
-	background: var(--zinc-white);
-	border-color: var(--zinc-white);
-	color: var(--blue);
+	background: var(--blue);
+	border-color: var(--blue);
+	color: var(--zinc-white);
 }
 
 /* ─── SECTION SHARED ──────────────────────────────────── */
