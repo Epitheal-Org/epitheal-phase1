@@ -1429,6 +1429,10 @@ footer {
 		min-height: auto;
 	}
 
+	main > .story:first-child {
+		padding-top: 7rem;
+	}
+
 	.hero-visual {
 		display: none;
 	}
