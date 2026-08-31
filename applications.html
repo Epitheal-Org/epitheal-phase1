@@ -35,7 +35,27 @@
 			<li><a href="/#contact" class="nav-contact">Get in touch</a></li>
 		</ul>
 		<a href="/ga/" class="nav-lang" aria-label="Switch to Irish language">EN&nbsp;|&nbsp;GA</a>
+		<button
+			type="button"
+			class="nav-toggle"
+			aria-expanded="false"
+			aria-controls="mobile-nav-panel"
+			aria-label="Open menu"
+		>
+			<span class="nav-toggle-bar"></span>
+			<span class="nav-toggle-bar"></span>
+			<span class="nav-toggle-bar"></span>
+		</button>
 	</nav>
+
+	<div id="mobile-nav-panel" class="mobile-nav-panel" aria-hidden="true" inert>
+		<a href="/#story">Our Story</a>
+		<a href="/#team">Team</a>
+		<a href="/#testimonials">Testimonials</a>
+		<a href="https://blog.epitheal.com/">Blog</a>
+		<a href="/applications.html">Applications</a>
+		<a href="/#contact" class="mobile-nav-cta">Get in touch</a>
+	</div>
 
 	<main>
 		<section class="applications" id="applications">
@@ -553,6 +573,7 @@
 			});
 		})();
 	</script>
+	<script src="assets/js/nav.js"></script>
 </body>
 
 </html>
