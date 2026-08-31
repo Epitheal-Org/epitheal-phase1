@@ -415,6 +415,10 @@ section {
 	font-weight: 600;
 }
 
+.heading-stop {
+	color: var(--pink);
+}
+
 .section-lead {
 	font-size: 1rem;
 	color: var(--charcoal-willow);
