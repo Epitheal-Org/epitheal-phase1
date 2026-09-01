@@ -879,9 +879,9 @@ section {
 
 .applications-ai-gov-strip {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	border-top: 1px solid rgba(7, 51, 193, 0.08);
+	/* border-top: 1px solid rgba(7, 51, 193, 0.08); */
 	padding-top: 2rem;
 	margin-bottom: 3rem;
 }
@@ -889,13 +889,14 @@ section {
 .applications-ai-gov-link {
 	display: inline-flex;
 	align-items: center;
-	gap: 12px;
+	gap: 35px;
 	background: #E6F1FB;
 	border: 1px solid #B5D4F4;
 	border-radius: 100px;
 	padding: 10px 20px;
 	text-decoration: none;
 	transition: opacity 0.2s ease;
+
 }
 
 .applications-ai-gov-link:hover,
@@ -975,6 +976,20 @@ section {
 	object-fit: cover;
 	border-radius: 50%;
 	display: block;
+}
+
+/* AI Governance strip orb -- scoped to .applications-ai-gov-strip so it
+   doesn't touch the .application-media used by the three track-block
+   sections above (bare .application-media/.application-media-placeholder/
+   .application-orb rules already exist for those; redefining them
+   unscoped here would silently override that sizing/background site-wide). */
+.applications-ai-gov-strip .application-media {
+	width: 100px;
+	flex-shrink: 0;
+}
+
+.applications-ai-gov-strip .application-media-placeholder {
+	background: var(--blue);
 }
 
 .application-num {
