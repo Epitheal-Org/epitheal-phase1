@@ -343,7 +343,8 @@
 						ideas into credible products.
 					</p>
 				</div>
-				<div class="team-grid fade-up" style="transition-delay: 0.1s">
+				<div class="team-rows fade-up" style="transition-delay: 0.1s">
+					<div class="team-grid team-grid--top">
 					<div class="team-card">
 						<div class="team-avatar team-avatar--photo">
 							<img src="assets/img/jp-prendergast.jpg" alt="JP Prendergast"
@@ -386,6 +387,8 @@
 							GSK Ireland, and Stiefel.
 						</p>
 					</div>
+					</div>
+					<div class="team-grid team-grid--bottom">
 					<div class="team-card">
 						<div class="team-avatar team-avatar--photo">
 							<img src="assets/img/emmet-noone.jpg" alt="Emmet Noone" />
@@ -422,6 +425,22 @@
 							multinational global procurement strategy and supply chain
 							management.
 						</p>
+					</div>
+					<div class="team-card">
+						<div class="team-avatar team-avatar--photo">
+							<img src="assets/img/jim-morel.jpg" alt="Jim Morel" />
+						</div>
+						<div class="team-name">Jim Morel</div>
+						<div class="team-role">Digital Platform Lead</div>
+						<p class="team-bio">
+							Developer with a career spanning project coordination, digital
+							design, and operations work. He leads Epitheal's digital space:
+							Platform architecture &amp; infrastructure, AI and Data
+							compliance, and automation integrations. He is a qualified
+							fullstack developer, ISC2 Certified in Cybersecurity (CC) and
+							Adobe Certified Professional.
+						</p>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -574,6 +593,13 @@
 		</div>
 	</div>
 
+	<!-- TEAM BIO POPUP -->
+	<div id="team-bio-popup" class="team-bio-popup" role="tooltip" aria-hidden="true">
+		<div class="team-bio-popup-name"></div>
+		<div class="team-bio-popup-role"></div>
+		<p class="team-bio-popup-text"></p>
+	</div>
+
 	<!-- SCRIPTS -->
 	<script>
 		// Scroll reveal
@@ -660,6 +686,63 @@
 				current = (current + 1) % slides.length;
 				slides[current].classList.add("active");
 			}, 7000);
+		})();
+	</script>
+	<script>
+		// Team card hover bio popup, viewport-aware positioning
+		(function () {
+			var cards = document.querySelectorAll(".team-card");
+			var popup = document.getElementById("team-bio-popup");
+			if (!cards.length || !popup) return;
+
+			var popupName = popup.querySelector(".team-bio-popup-name");
+			var popupRole = popup.querySelector(".team-bio-popup-role");
+			var popupText = popup.querySelector(".team-bio-popup-text");
+			var activeCard = null;
+			var GAP = 12;
+			var EDGE_MARGIN = 8;
+
+			function position(card) {
+				var rect = card.getBoundingClientRect();
+				var popupRect = popup.getBoundingClientRect();
+
+				var fitsAbove = rect.top >= popupRect.height + GAP;
+				popup.style.top = fitsAbove
+					? rect.top - popupRect.height - GAP + "px"
+					: rect.bottom + GAP + "px";
+
+				var left = rect.left + rect.width / 2 - popupRect.width / 2;
+				var maxLeft = window.innerWidth - popupRect.width - EDGE_MARGIN;
+				left = Math.max(EDGE_MARGIN, Math.min(left, maxLeft));
+				popup.style.left = left + "px";
+			}
+
+			function show(card) {
+				activeCard = card;
+				popupName.textContent = card.querySelector(".team-name").textContent;
+				popupRole.textContent = card.querySelector(".team-role").textContent;
+				popupText.textContent = card.querySelector(".team-bio").textContent.trim();
+				popup.setAttribute("aria-hidden", "false");
+				popup.classList.add("is-visible");
+				position(card);
+			}
+
+			function hide() {
+				activeCard = null;
+				popup.classList.remove("is-visible");
+				popup.setAttribute("aria-hidden", "true");
+			}
+
+			cards.forEach(function (card) {
+				card.addEventListener("mouseenter", function () {
+					show(card);
+				});
+				card.addEventListener("mouseleave", hide);
+			});
+
+			window.addEventListener("resize", function () {
+				if (activeCard) position(activeCard);
+			});
 		})();
 	</script>
 	<script src="assets/js/nav.js"></script>
