@@ -1587,6 +1587,21 @@ footer {
 		grid-template-columns: 1fr;
 	}
 
+	/* Mobile fallback: no hover on touch, so the bio renders inline
+	   and statically instead of relying on the popup (which is fully
+	   disabled at this breakpoint via matchMedia in the JS, not just
+	   hidden here). Styled like the site's other small body copy
+	   (e.g. .application-copy p) rather than the popup's white-card
+	   look, since it's just inline text now, not a floating panel. */
+	.team-bio {
+		display: block;
+		font-size: 0.9rem;
+		color: var(--charcoal-willow);
+		opacity: 0.8;
+		line-height: 1.7;
+		margin-top: 0.75rem;
+	}
+
 	.footer-body {
 		grid-template-columns: 1fr;
 		gap: 2rem;

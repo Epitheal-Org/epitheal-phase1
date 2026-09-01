@@ -701,6 +701,12 @@
 			var activeCard = null;
 			var GAP = 12;
 			var EDGE_MARGIN = 8;
+			// Below this width the bio renders inline in the card instead
+			// (see the ≤768px .team-bio rule in style.css) -- the popup
+			// mechanism is disabled entirely here, not just visually hidden,
+			// so a touch browser's synthetic mouseenter-on-first-tap can't
+			// trigger it.
+			var mobileQuery = window.matchMedia("(max-width: 768px)");
 
 			function position(card) {
 				var rect = card.getBoundingClientRect();
@@ -735,13 +741,26 @@
 
 			cards.forEach(function (card) {
 				card.addEventListener("mouseenter", function () {
+					if (mobileQuery.matches) return;
 					show(card);
 				});
 				card.addEventListener("mouseleave", hide);
 			});
 
 			window.addEventListener("resize", function () {
+				if (mobileQuery.matches) {
+					if (activeCard) hide();
+					return;
+				}
 				if (activeCard) position(activeCard);
+			});
+
+			// Precise breakpoint-crossing signal (e.g. rotating a tablet)
+			// in addition to the generic resize listener above -- makes
+			// sure the popup is torn down the instant the query flips to
+			// mobile, even if no further resize event follows.
+			mobileQuery.addEventListener("change", function (e) {
+				if (e.matches && activeCard) hide();
 			});
 		})();
 	</script>
