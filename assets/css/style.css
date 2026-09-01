@@ -879,8 +879,9 @@ section {
 
 .applications-ai-gov-strip {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-end;
 	align-items: center;
+	gap: 50px;
 	/* border-top: 1px solid rgba(7, 51, 193, 0.08); */
 	padding-top: 2rem;
 	margin-bottom: 3rem;
