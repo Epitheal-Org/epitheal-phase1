@@ -379,6 +379,46 @@ nav ul a:hover {
 	color: var(--zinc-white);
 }
 
+/* ARROW */
+/* .centered-container {
+  background-color: var(--zinc-white);
+  display: inline-flex;
+  padding: 4rem;
+  border-radius: 0.125rem;
+  border: .5px solid var(--charcoal-willow);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+} */
+
+.link {
+  color: var(--pink);
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link--arrowed {
+  display: inline-block;
+  height: 3rem;
+  line-height: 3rem;
+}
+.link--arrowed .arrow-icon {
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+.link--arrowed .arrow-icon--circle {
+  transition: stroke-dashoffset 0.3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+}
+.link--arrowed:hover .arrow-icon {
+  transform: translate3d(5px, 0, 0);
+}
+.link--arrowed:hover .arrow-icon--circle {
+  stroke-dashoffset: 0;
+}
+
 /* ─── SECTION SHARED ──────────────────────────────────── */
 
 section {
