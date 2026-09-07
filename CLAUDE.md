@@ -27,8 +27,9 @@ that assumes one is coming.
   site without explicit instruction. Wording changes are a Maria/JP
   decision, not a code task, even if a change looks like an obvious
   improvement.
-- Do not touch the `/ga` (Irish language) nav link or create Irish
-  content. That's a pending content decision, not a broken build.
+- Do not create Irish (`/ga`) language content. The EN/GA nav toggle
+  was removed 2026-09-07 (drift from an unrelated Shopify conversation,
+  never an intended feature of this site) and should not be re-added.
 - Do not add, remove, or reorder team members, testimonials, or product
   claims. Anything that reads as a health, medical, or efficacy claim
   ("treats", "heals", "cures", "clinically proven") needs sign-off from

@@ -95,27 +95,6 @@ nav ul a:hover {
 	opacity: 1 !important;
 }
 
-.nav-lang {
-	display: none;
-	font-size: 0.75rem;
-	font-weight: 600;
-	color: rgba(255, 255, 255, 0.5);
-	letter-spacing: 0.06em;
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	padding: 5px 12px;
-	border-radius: 4px;
-	cursor: pointer;
-	transition:
-		color 0.2s,
-		border-color 0.2s;
-	text-decoration: none;
-}
-
-.nav-lang:hover {
-	color: rgba(255, 255, 255, 0.85);
-	border-color: rgba(255, 255, 255, 0.4);
-}
-
 .nav-toggle {
 	display: none;
 	flex-direction: column;
@@ -1493,10 +1472,6 @@ footer {
 	}
 
 	nav ul {
-		display: none;
-	}
-
-	.nav-lang {
 		display: none;
 	}
 
