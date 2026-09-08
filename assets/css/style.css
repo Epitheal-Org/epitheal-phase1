@@ -523,6 +523,26 @@ section {
 	font-weight: 600;
 }
 
+.legal-content h3 {
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: var(--blue);
+	margin: 2.25rem 0 0.75rem;
+}
+
+.legal-content p,
+.legal-content li {
+	font-size: 1rem;
+	line-height: 1.75;
+	color: var(--charcoal-willow);
+	margin-bottom: 1rem;
+}
+
+.legal-content ul {
+	padding-left: 1.25rem;
+	margin-bottom: 1.5rem;
+}
+
 .photo-slot {
 	border-radius: 10px;
 	overflow: hidden;
