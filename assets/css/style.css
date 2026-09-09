@@ -495,6 +495,11 @@ section {
 	padding-bottom: 2rem;
 }
 
+.legal-page {
+	background: var(--zinc-white);
+	padding-bottom: 2rem;
+}
+
 .story-grid {
 	display: grid;
 	grid-template-columns: 55fr 45fr;
